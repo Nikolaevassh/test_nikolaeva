@@ -13,8 +13,8 @@ html {
 }
 
 body {
-  position: relative;
   height: 100vh;
+  position: relative;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -64,6 +64,11 @@ img {
   justify-content: center;
   margin-top: 20px;
 }
+
+.characters img {
+  height: 230px;
+}
+
 .karkusha {
   margin-left: 10px;
 }
@@ -85,7 +90,8 @@ img {
   box-shadow: 0px 4px 30px #ffffff;
   border: none;
   border-radius: 80px/60px;
-  padding: 41px 162px 43px 101px;
+  /* padding: 41px 162px 43px 101px; */
+  padding: 21px 120px 23px 55px;
   margin-bottom: 15px;
   cursor: pointer;
 }
@@ -98,8 +104,10 @@ img {
 .btn::after {
   content: "";
   position: absolute;
-  top: 45px;
-  right: 90px;
+  /* top: 45px;
+  right: 90px; */
+  top: 25px;
+  right: 55px;
   width: 35px;
   height: 35px;
   background: url(../img/play.png) no-repeat;
@@ -110,11 +118,10 @@ img {
   /* margin-bottom: 175px; */
 }
 .candidate-info {
-  /* margin-bottom: 55px; */
   position: absolute;
-  bottom: 55px;
   left: 0;
   right: 0;
+  bottom: 25px;
 }
 .candidate-info p {
   margin: 0;
@@ -138,6 +145,10 @@ img {
   margin: 0 auto;
 }
 @media (max-width: 767px) {
+  body {
+    height: 100vh;
+    position: relative;
+  }
   .container {
     padding: 0 15px;
   }
@@ -147,14 +158,18 @@ img {
   .characters {
     display: none;
   }
-  .btn {
-    padding: 21px 120px 23px 55px;
-  }
-  .btn::after {
-    top: 25px;
-    right: 55px;
-  }
   .candidate-info {
     margin-bottom: 0;
+  }
+}
+
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    font-size: 16px;
+  }
+
+  .main-header,
+  .btn {
+    font-size: 23px;
   }
 }
