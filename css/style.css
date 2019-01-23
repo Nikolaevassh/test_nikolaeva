@@ -53,12 +53,29 @@ img {
   overflow: hidden;
 }
 .watch-programm .container,
-.candidate-info .container {
+.candidate-info .container,
+.call-to-action .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+.watch-programm,
+.candidate-info {
+  height: 45vh;
+}
+
+.call-to-action {
+  height: 10vh;
+}
+
+.watch-programm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .characters {
   display: flex;
   justify-content: center;
@@ -72,6 +89,7 @@ img {
 .karkusha {
   margin-left: 10px;
 }
+
 .main-header {
   font-size: 32px;
   text-align: center;
@@ -104,8 +122,8 @@ img {
 .btn::after {
   content: "";
   position: absolute;
-  /* top: 45px;
-  right: 90px; */
+  top: 45px;
+  right: 90px;
   top: 25px;
   right: 55px;
   width: 35px;
@@ -115,13 +133,17 @@ img {
 .task {
   line-height: 22px;
   margin: 0;
-  /* margin-bottom: 175px; */
+  /* margin-bottom: 175px;*/
 }
 .candidate-info {
-  position: absolute;
+  /* position: absolute;
   left: 0;
   right: 0;
-  bottom: 25px;
+  bottom: 25px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 55px;
 }
 .candidate-info p {
   margin: 0;
@@ -144,6 +166,7 @@ img {
   padding-right: 140px;
   margin: 0 auto;
 }
+
 @media (max-width: 767px) {
   body {
     height: 100vh;
@@ -171,5 +194,23 @@ img {
   .main-header,
   .btn {
     font-size: 23px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .main-header,
+  .btn {
+    font-size: 25px;
+  }
+
+  .characters img {
+    height: 153px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 375px) {
+  .main-header,
+  .btn {
+    font-size: 27px;
   }
 }
