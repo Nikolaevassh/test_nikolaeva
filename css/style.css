@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "BIP";
+
+  src: url("../fonts/bip.woff") format("woff"),
+    url("../fonts/bip.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-family: "BIP";
+  font-size: 20px;
+  line-height: normal;
+  color: #307f9e;
+
+  background: #1baae2
+    linear-gradient(100.06deg, #1baae2 -23.86%, #8be8f7 36%, #00d9f4 111.57%)
+    no-repeat;
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.watch-programm .container,
+.candidate-info .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.characters {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.karkusha {
+  margin-left: 10px;
+}
+.main-header {
+  font-size: 32px;
+  text-align: center;
+  max-width: 525px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+.btn {
+  position: relative;
+  font-size: 32px;
+  line-height: 35px;
+  color: #307f9e;
+  background: linear-gradient(180deg, #fad781 0%, #efc253 100%);
+  background-color: #efc253;
+  box-shadow: 0px 4px 30px #ffffff;
+  border: none;
+  border-radius: 80px/60px;
+  padding: 41px 162px 43px 101px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(180deg, #fad781 0%, #ffbf00 100%);
+}
+.btn:active {
+  background: linear-gradient(180deg, #fad781 0%, #bf9b30 100%);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  right: 90px;
+  width: 35px;
+  height: 35px;
+  background: url(../img/play.png) no-repeat;
+}
+.task {
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 175px;
+}
+.candidate-info {
+  margin-bottom: 55px;
+}
+.candidate-info p {
+  margin: 0;
+  line-height: 24px;
+}
+.candidate-info a {
+  color: #307f9e;
+}
+.candidate-info a:hover {
+  color: #4146fc;
+}
+.candidate-info a:active {
+  color: #0309f9;
+}
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 140px;
+  padding-right: 140px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+  .watch-programm {
+    padding-top: 60px;
+  }
+  .characters {
+    display: none;
+  }
+  .btn {
+    padding: 21px 120px 23px 55px;
+  }
+  .btn::after {
+    top: 25px;
+    right: 55px;
+  }
+  .candidate-info {
+    margin-bottom: 0;
+  }
+}
