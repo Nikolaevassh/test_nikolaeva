@@ -24,21 +24,39 @@ body {
   line-height: normal;
   color: #307f9e;
 
+  background: #1baae2 -webkit-linear-gradient(
+      349.94deg,
+      #1baae2 -23.86%,
+      #8be8f7 36%,
+      #00d9f4 111.57%
+    ) no-repeat;
+
+  background: #1baae2 -o-linear-gradient(
+      349.94deg,
+      #1baae2 -23.86%,
+      #8be8f7 36%,
+      #00d9f4 111.57%
+    ) no-repeat;
+
   background: #1baae2
     linear-gradient(100.06deg, #1baae2 -23.86%, #8be8f7 36%, #00d9f4 111.57%)
     no-repeat;
   background-size: cover;
 }
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -52,12 +70,22 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .watch-programm .container,
 .candidate-info .container,
 .call-to-action .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -71,13 +99,24 @@ img {
 }
 
 .watch-programm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .characters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 20px;
 }
@@ -98,27 +137,58 @@ img {
   margin: 0 auto;
   margin-bottom: 35px;
 }
+
 .btn {
   position: relative;
   font-size: 32px;
   line-height: 35px;
   color: #307f9e;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fad781),
+    to(#efc253)
+  );
+  background: -webkit-linear-gradient(top, #fad781 0%, #efc253 100%);
+  background: -o-linear-gradient(top, #fad781 0%, #efc253 100%);
   background: linear-gradient(180deg, #fad781 0%, #efc253 100%);
   background-color: #efc253;
+  -webkit-box-shadow: 0px 4px 30px #ffffff;
   box-shadow: 0px 4px 30px #ffffff;
   border: none;
   border-radius: 80px/60px;
-  /* padding: 41px 162px 43px 101px; */
   padding: 21px 120px 23px 55px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
+
 .btn:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fad781),
+    to(#ffbf00)
+  );
+  background: -webkit-linear-gradient(top, #fad781 0%, #ffbf00 100%);
+  background: -o-linear-gradient(top, #fad781 0%, #ffbf00 100%);
   background: linear-gradient(180deg, #fad781 0%, #ffbf00 100%);
 }
+
 .btn:active {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fad781),
+    to(#bf9b30)
+  );
+  background: -webkit-linear-gradient(top, #fad781 0%, #bf9b30 100%);
+  background: -o-linear-gradient(top, #fad781 0%, #bf9b30 100%);
   background: linear-gradient(180deg, #fad781 0%, #bf9b30 100%);
 }
+
 .btn::after {
   content: "";
   position: absolute;
@@ -130,35 +200,44 @@ img {
   height: 35px;
   background: url(../img/play.png) no-repeat;
 }
+
 .task {
   line-height: 22px;
   margin: 0;
-  /* margin-bottom: 175px;*/
 }
+
 .candidate-info {
-  /* position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 25px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   padding-bottom: 55px;
 }
+
 .candidate-info p {
   margin: 0;
   line-height: 24px;
   text-align: center;
 }
+
 .candidate-info a {
   color: #307f9e;
 }
+
 .candidate-info a:hover {
   color: #4146fc;
 }
+
 .candidate-info a:active {
   color: #0309f9;
 }
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -168,10 +247,6 @@ img {
 }
 
 @media (max-width: 767px) {
-  body {
-    height: 100vh;
-    position: relative;
-  }
   .container {
     padding: 0 15px;
   }
